@@ -3,59 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Personal Site</title>
+  <title>Masterclass: Learn Anything Fast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #111;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      min-height: 100vh;
+      padding: 2rem;
     }
 
-    .card {
-      background: white;
-      padding: 3rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    .container {
+      max-width: 800px;
+      width: 100%;
       text-align: center;
-      max-width: 500px;
     }
 
     h1 {
-      margin-top: 0;
+      font-size: 2.75rem;
+      margin-bottom: 0.5rem;
     }
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+    p.subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #555;
     }
 
-    a.button {
+    .section {
+      margin: 2rem 0;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✔";
+      color: #00b894;
+      margin-right: 0.5rem;
+    }
+
+    .cta {
+      margin-top: 2rem;
+    }
+
+    .cta a {
       display: inline-block;
-      margin-top: 1.5rem;
       padding: 0.75rem 1.5rem;
-      background: #007acc;
-      color: white;
+      background: #111;
+      color: #fff;
       text-decoration: none;
+      font-weight: 600;
       border-radius: 8px;
       transition: background 0.2s ease;
     }
 
-    a.button:hover {
-      background: #005fa3;
+    .cta a:hover {
+      background: #333;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.25rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Hello, I'm [Your Name]</h1>
-    <p>Welcome to my clean and simple personal website hosted with GitHub Pages. You can customize this text and make it truly yours.</p>
-    <a class="button" href="mailto:your@email.com">Contact Me</a>
+  <div class="container">
+    <h1>Masterclass: Learn Anything Fast</h1>
+    <p class="subtitle">A streamlined course that teaches you how to learn faster, retain more, and build skills like a pro.</p>
+
+    <div class="section">
+      <h2>What You’ll Learn</h2>
+      <ul>
+        <li>Speed learning techniques that actually work</li>
+        <li>How to stay motivated and consistent</li>
+        <li>Study hacks backed by science</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>What’s Included</h2>
+      <ul>
+        <li>5 high-impact video lessons</li>
+        <li>Downloadable guides & resources</li>
+        <li>Email support for questions</li>
+      </ul>
+    </div>
+
+    <div class="cta">
+      <a href="https://example.com/enroll" target="_blank">Enroll Now</a>
+    </div>
   </div>
 </body>
 </html>
