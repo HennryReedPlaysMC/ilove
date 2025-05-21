@@ -2,114 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Masterclass: Learn Anything Fast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO Insights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Inter', sans-serif;
-      background: #f9f9f9;
-      color: #111;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    }
+    body {
+      background: #0f0f10;
+      color: white;
       padding: 2rem;
     }
-
-    .container {
-      max-width: 800px;
-      width: 100%;
+    .hero {
       text-align: center;
+      padding: 5rem 1rem 3rem;
+      background: radial-gradient(circle at top, #1a1a2e, #0f0f10);
     }
-
-    h1 {
-      font-size: 2.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p.subtitle {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      color: #555;
-    }
-
-    .section {
-      margin: 2rem 0;
-    }
-
-    .section h2 {
-      font-size: 1.5rem;
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
       margin-bottom: 1rem;
     }
-
-    ul {
-      list-style: none;
-      padding: 0;
+    .hero h1 span {
+      background: linear-gradient(90deg, #f81ce5, #7928ca);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-
-    ul li::before {
-      content: "✔";
-      color: #00b894;
-      margin-right: 0.5rem;
+    .hero p {
+      color: #aaa;
+      max-width: 600px;
+      margin: 1rem auto 2rem;
     }
-
-    .cta {
-      margin-top: 2rem;
-    }
-
-    .cta a {
-      display: inline-block;
+    .hero button {
+      background: linear-gradient(to right, #f81ce5, #7928ca);
+      color: white;
       padding: 0.75rem 1.5rem;
-      background: #111;
-      color: #fff;
-      text-decoration: none;
       font-weight: 600;
+      border: none;
       border-radius: 8px;
-      transition: background 0.2s ease;
+      cursor: pointer;
     }
-
-    .cta a:hover {
-      background: #333;
+    .dashboard {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 4rem;
+      flex-wrap: wrap;
     }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .section h2 {
-        font-size: 1.25rem;
-      }
+    .card {
+      background: #1e1e20;
+      padding: 1.5rem;
+      border-radius: 12px;
+      width: 300px;
+      margin: 1rem;
+      box-shadow: 0 0 12px rgba(255, 0, 255, 0.1);
+    }
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #666;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Masterclass: Learn Anything Fast</h1>
-    <p class="subtitle">A streamlined course that teaches you how to learn faster, retain more, and build skills like a pro.</p>
+  <section class="hero">
+    <h1>Collect <span>Data</span> for Amazing <span>SEO</span></h1>
+    <p>Find all the SEO secrets of your competitors and track them daily without hours of boring keyword research & grouping.</p>
+    <button>Get Started</button>
+  </section>
 
-    <div class="section">
-      <h2>What You’ll Learn</h2>
-      <ul>
-        <li>Speed learning techniques that actually work</li>
-        <li>How to stay motivated and consistent</li>
-        <li>Study hacks backed by science</li>
-      </ul>
+  <section class="dashboard">
+    <div class="card">
+      <h2>Page Data</h2>
+      <p>Keyword performance graphs coming soon.</p>
     </div>
+    <div class="card">
+      <h2>Popular Keywords</h2>
+      <p>#NoCodeBuilder #Website #Typedream</p>
+    </div>
+    <div class="card">
+      <h2>Linked Score</h2>
+      <p>85% authority</p>
+    </div>
+  </section>
 
-    <div class="section">
-      <h2>What’s Included</h2>
-      <ul>
-        <li>5 high-impact video lessons</li>
-        <li>Downloadable guides & resources</li>
-        <li>Email support for questions</li>
-      </ul>
-    </div>
-
-    <div class="cta">
-      <a href="https://example.com/enroll" target="_blank">Enroll Now</a>
-    </div>
-  </div>
+  <footer class="footer">
+    © 2025 SEOInsights. All rights reserved.
+  </footer>
 </body>
 </html>
