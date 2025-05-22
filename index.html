@@ -6,27 +6,28 @@
   <title>Rainfall Softworks</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
-  <section class="hero">
+  <section class="hero fade-in">
     <h1>Welcome to <span>Rainfall Softworks</span></h1>
     <p>Innovative web and software solutions crafted with precision, performance, and purpose.</p>
     <button>Get in Touch</button>
   </section>
 
   <section class="dashboard">
-    <div class="card">
-      <h2>Page Analytics</h2>
-      <p>Monitor page-level insights and upcoming performance dashboards.</p>
-    </div>
-    <div class="card">
-      <h2>SEO Tools</h2>
-      <p>Real-time keyword tracking with zero-code integration.</p>
-    </div>
-    <div class="card">
-      <h2>Authority Score</h2>
-      <p>Gain deeper insights into domain strength and backlinks.</p>
-    </div>
+    <a href="https://mail.google.com/mail/u/0/#inbox" class="card fade-in" style="animation-delay: 0.2s" data-aos="fade-up">
+      <h2>About Us</h2>
+      <p>Learn about our mission, vision, and the passionate team behind Rainfall Softworks.</p>
+    </a>
+    <a href="https://mail.google.com/mail/u/0/#inbox" class="card fade-in" style="animation-delay: 0.4s" data-aos="fade-up">
+      <h2>Our Games</h2>
+      <p>Explore unique, creative games designed and developed by our in-house team.</p>
+    </a>
+    <a href="https://mail.google.com/mail/u/0/#inbox" class="card fade-in" style="animation-delay: 0.6s" data-aos="fade-up">
+      <h2>Our Classes</h2>
+      <p>We offer beginner-friendly game development and web design classes. Join us and start building!</p>
+    </a>
   </section>
 
   <footer>
@@ -64,5 +65,10 @@
       © 2025 Rainfall Softworks. All rights reserved.
     </div>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
