@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEO Insights</title>
+  <title>Rainfall Softworks</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * {
@@ -15,11 +15,12 @@
     body {
       background: #0f0f10;
       color: white;
-      padding: 2rem;
+      padding: 0;
+      line-height: 1.6;
     }
     .hero {
       text-align: center;
-      padding: 5rem 1rem 3rem;
+      padding: 6rem 1rem 4rem;
       background: radial-gradient(circle at top, #1a1a2e, #0f0f10);
     }
     .hero h1 {
@@ -45,57 +46,130 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .hero button:hover {
+      background: linear-gradient(to right, #7928ca, #f81ce5);
     }
     .dashboard {
       display: flex;
-      justify-content: space-around;
-      margin-top: 4rem;
+      justify-content: center;
+      margin: 4rem auto;
       flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1000px;
     }
     .card {
       background: #1e1e20;
-      padding: 1.5rem;
+      padding: 2rem;
       border-radius: 12px;
       width: 300px;
-      margin: 1rem;
       box-shadow: 0 0 12px rgba(255, 0, 255, 0.1);
     }
     .card h2 {
       font-size: 1.25rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
-    .footer {
+    .card p {
+      color: #bbb;
+    }
+    footer {
+      background: #111;
+      padding: 4rem 2rem 2rem;
       text-align: center;
-      padding: 2rem 1rem;
+    }
+    .footer-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: #ccc;
+    }
+    .footer-section {
+      margin: 1rem;
+      flex: 1 1 200px;
+    }
+    .footer-section h3 {
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .footer-section ul {
+      list-style: none;
+    }
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-bottom {
+      margin-top: 2rem;
+      font-size: 0.875rem;
       color: #666;
-      font-size: 0.9rem;
+    }
+    a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #fff;
     }
   </style>
 </head>
 <body>
   <section class="hero">
-    <h1>Collect <span>Data</span> for Amazing <span>SEO</span></h1>
-    <p>Find all the SEO secrets of your competitors and track them daily without hours of boring keyword research & grouping.</p>
-    <button>Get Started</button>
+    <h1>Welcome to <span>Rainfall Softworks</span></h1>
+    <p>Innovative web and software solutions crafted with precision, performance, and purpose.</p>
+    <button>Get in Touch</button>
   </section>
 
   <section class="dashboard">
     <div class="card">
-      <h2>Page Data</h2>
-      <p>Keyword performance graphs coming soon.</p>
+      <h2>Page Analytics</h2>
+      <p>Monitor page-level insights and upcoming performance dashboards.</p>
     </div>
     <div class="card">
-      <h2>Popular Keywords</h2>
-      <p>#NoCodeBuilder #Website #Typedream</p>
+      <h2>SEO Tools</h2>
+      <p>Real-time keyword tracking with zero-code integration.</p>
     </div>
     <div class="card">
-      <h2>Linked Score</h2>
-      <p>85% authority</p>
+      <h2>Authority Score</h2>
+      <p>Gain deeper insights into domain strength and backlinks.</p>
     </div>
   </section>
 
-  <footer class="footer">
-    © 2025 SEOInsights. All rights reserved.
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Rainfall Softworks delivers modern, scalable, and smart digital solutions tailored to help your business grow online.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li>Custom Web Apps</li>
+          <li>SEO Optimization</li>
+          <li>Analytics & Reporting</li>
+          <li>UX/UI Design</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: contact@rainfallsoftworks.com</li>
+          <li>Phone: +1 (555) 123-4567</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Rainfall Softworks. All rights reserved.
+    </div>
   </footer>
 </body>
 </html>
