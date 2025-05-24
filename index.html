@@ -14,10 +14,11 @@
     }
 
     body {
-      background: #0f0f10;
+      background: linear-gradient(135deg, #0f0f10, #1a1a2e, #0f0f10);
       color: white;
       padding: 0;
       line-height: 1.6;
+      transition: background 1s ease;
     }
 
     /* Hero Section */
@@ -28,18 +29,8 @@
       opacity: 0;
       transform: translateY(20px);
       animation: fadeInUp 1s ease forwards;
-    }
-
-    .hero-header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .hero-header img {
-      height: 50px;
+      background-size: 400% 400%;
+      animation: gradientMove 20s ease infinite, fadeInUp 1s ease forwards;
     }
 
     .hero h1 {
@@ -77,12 +68,18 @@
       border-radius: 12px;
       width: 300px;
       box-shadow: 0 0 12px rgba(255, 0, 255, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
       text-decoration: none;
       color: inherit;
       opacity: 0;
       transform: scale(0.95);
       animation: fadeInZoom 1s ease forwards;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+      background: #2a2a2e;
     }
 
     .card:nth-child(1) { animation-delay: 0.2s; }
@@ -94,11 +91,6 @@
     .card:nth-child(7) { animation-delay: 0.8s; }
     .card:nth-child(8) { animation-delay: 0.9s; }
     .card:nth-child(9) { animation-delay: 1s; }
-
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
-    }
 
     .card h2 {
       font-size: 1.25rem;
@@ -137,14 +129,23 @@
         opacity: 1;
       }
     }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
   </style>
 </head>
 <body>
   <section class="hero">
-    <div class="hero-header">
-      <img src="Logo.png" alt="Rainfall Softworks Logo">
-      <h1><span>Rainfall Softworks</span> Summer Programs</h1>
-    </div>
+    <h1><span>Rainfall Softworks</span> Summer Programs</h1>
     <p>Explore cutting-edge game development courses this summer.</p>
   </section>
 
