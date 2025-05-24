@@ -25,6 +25,21 @@
       text-align: center;
       padding: 6rem 1rem 4rem;
       background: radial-gradient(circle at top, #1a1a2e, #0f0f10);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .hero-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-header img {
+      height: 50px;
     }
 
     .hero h1 {
@@ -43,6 +58,7 @@
       color: #aaa;
       max-width: 600px;
       margin: 1rem auto 2rem;
+      animation: fadeIn 2s ease-in forwards;
     }
 
     /* Dashboard Cards */
@@ -64,10 +80,22 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-decoration: none;
       color: inherit;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: fadeInZoom 1s ease forwards;
     }
 
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.3s; }
+    .card:nth-child(3) { animation-delay: 0.4s; }
+    .card:nth-child(4) { animation-delay: 0.5s; }
+    .card:nth-child(5) { animation-delay: 0.6s; }
+    .card:nth-child(6) { animation-delay: 0.7s; }
+    .card:nth-child(7) { animation-delay: 0.8s; }
+    .card:nth-child(8) { animation-delay: 0.9s; }
+
     .card:hover {
-      transform: translateY(-10px);
+      transform: scale(1.05);
       box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
     }
 
@@ -88,46 +116,69 @@
     a:hover {
       color: #fff;
     }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInZoom {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
   <section class="hero">
-    <h1><span>Rainfall Softworks</span> Summer Programs</h1>
+    <div class="hero-header">
+      <img src="logo.png" alt="Rainfall Softworks Logo">
+      <h1><span>Rainfall Softworks</span> Summer Programs</h1>
+    </div>
     <p>Explore cutting-edge game development courses this summer.</p>
   </section>
 
   <section class="dashboard">
-    <a class="card" href="program1.html">
-      <h2>Game Design Bootcamp</h2>
-      <p>Learn the fundamentals of game design using professional tools.</p>
+    <a class="card" href="basic-java.html">
+      <h2>Basic Java Processing (2 Weeks)</h2>
+      <p>Learn Java with daily one-hour sessions. Age 13–18. $150 total.</p>
     </a>
-    <a class="card" href="program2.html">
-      <h2>Intro to Unreal Engine</h2>
-      <p>Dive into Unreal Engine and start building interactive experiences.</p>
+    <a class="card" href="java-month.html">
+      <h2>Java Processing (1 Month)</h2>
+      <p>In-depth OOP course with paid assets. Age 13–18. $480 total.</p>
     </a>
-    <a class="card" href="program3.html">
-      <h2>3D Art & Animation</h2>
-      <p>Create stunning 3D models and animations from scratch.</p>
+    <a class="card" href="scratch-free.html">
+      <h2>Scratch Programming (Free)</h2>
+      <p>Intro to block coding. One 2-hour session. Age 7–13. Free.</p>
     </a>
-    <a class="card" href="program4.html">
-      <h2>Level Design Workshop</h2>
-      <p>Design immersive environments and game levels.</p>
+    <a class="card" href="roblox-basics.html">
+      <h2>Roblox Studio Basics (1 Week)</h2>
+      <p>Fun Roblox game creation. Age 7–15. $75 total.</p>
     </a>
-    <a class="card" href="program5.html">
-      <h2>Programming for Games</h2>
-      <p>Learn to script mechanics and build your own game systems.</p>
+    <a class="card" href="roblox-intermediate.html">
+      <h2>Intermediate Roblox Studio (4 Weeks)</h2>
+      <p>Advanced LUA and projects. Age 10–15. $650 total.</p>
     </a>
-    <a class="card" href="program6.html">
-      <h2>Storytelling in Games</h2>
-      <p>Craft compelling narratives and integrate them into gameplay.</p>
+    <a class="card" href="html-css.html">
+      <h2>HTML & CSS Website Building</h2>
+      <p>Code and host your own website.</p>
     </a>
-    <a class="card" href="program7.html">
-      <h2>Sound & Music</h2>
-      <p>Design sound effects and compose music for your games.</p>
+    <a class="card" href="netbeans-java.html">
+      <h2>Java NetBeans Programming</h2>
+      <p>Testing</p>
     </a>
-    <a class="card" href="program8.html">
-      <h2>Game Studio Simulation</h2>
-      <p>Work as a team to create and pitch a complete game project.</p>
+    <a class="card" href="scratch-jr.html">
+      <h2>Scratch JR</h2>
+      <p>Testing</p>
     </a>
   </section>
 </body>
