@@ -2,205 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rainfall Softworks - Summer Programs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #0f0f10, #1a1a2e, #0f0f10);
-      color: white;
-      padding: 0;
-      line-height: 1.6;
-      transition: background 1s ease;
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      padding: 6rem 1rem 4rem;
-      background: radial-gradient(circle at top, #1a1a2e, #0f0f10);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-      background-size: 400% 400%;
-      animation: gradientMove 20s ease infinite, fadeInUp 1s ease forwards;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-
-    .hero h1 span {
-      background: linear-gradient(90deg, #f81ce5, #7928ca);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      color: #aaa;
-      max-width: 600px;
-      margin: 1rem auto 2rem;
-      animation: fadeIn 2s ease-in forwards;
-    }
-
-    /* Dashboard Cards */
-    .dashboard {
-      display: flex;
-      justify-content: center;
-      margin: 4rem auto;
-      flex-wrap: wrap;
-      gap: 2rem;
-      max-width: 1000px;
-    }
-
-    .card {
-      background: #1e1e20;
-      padding: 1.5rem;
-      border-radius: 12px;
-      width: 300px;
-      box-shadow: 0 0 12px rgba(255, 0, 255, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-      opacity: 0;
-      transform: scale(0.95);
-      animation: fadeInZoom 1s ease forwards;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
-      background: #2a2a2e;
-    }
-
-    .card:nth-child(1) { animation-delay: 0.2s; }
-    .card:nth-child(2) { animation-delay: 0.3s; }
-    .card:nth-child(3) { animation-delay: 0.4s; }
-    .card:nth-child(4) { animation-delay: 0.5s; }
-    .card:nth-child(5) { animation-delay: 0.6s; }
-    .card:nth-child(6) { animation-delay: 0.7s; }
-    .card:nth-child(7) { animation-delay: 0.8s; }
-    .card:nth-child(8) { animation-delay: 0.9s; }
-    .card:nth-child(9) { animation-delay: 1s; }
-
-    .card h2 {
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .card p {
-      color: #bbb;
-    }
-
-    a {
-      color: #aaa;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #fff;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInZoom {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes gradientMove {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Company</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <section class="hero">
-    <h1><span>Rainfall Softworks</span> Summer Programs</h1>
-    <p>New website is in the making. All classes and programs are hosted on Zoom, Discord, and Google Meet. Each class will have 1 teacher and possibly up to 3 teaching assistants. Office hours are provided for each class. Saturday 12:00 - 14:00 EST is office hours for all classes. If you have any questions, please contact RainfallSoftworks@gmail.com. </p>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navigation Header -->
+  <header class="bg-gray-950 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition-all">My Company</h1>
+      <nav class="hidden md:flex gap-6">
+        <a href="#" class="hover:text-indigo-300 transition">Home</a>
+        <a href="#about" class="hover:text-indigo-300 transition">About</a>
+        <a href="#services" class="hover:text-indigo-300 transition">Services</a>
+        <a href="#contact" class="hover:text-indigo-300 transition">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="#" class="block hover:text-indigo-300">Home</a>
+      <a href="#about" class="block hover:text-indigo-300">About</a>
+      <a href="#services" class="block hover:text-indigo-300">Services</a>
+      <a href="#contact" class="block hover:text-indigo-300">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-24 px-6 bg-gradient-to-b from-gray-900 to-gray-800">
+    <h2 class="text-5xl font-extrabold mb-4 text-indigo-400">Welcome to My Company</h2>
+    <p class="text-xl max-w-2xl mx-auto text-gray-300">We build innovative digital solutions that power the future. Explore our services and discover what we can do together.</p>
+    <div class="mt-8">
+      <a href="#services" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-6 py-3 rounded-full transition">Explore Services</a>
+    </div>
   </section>
 
-  <section class="dashboard">
-    <a class="card" href="basic-java.html">
-      <img src="Processing.png" alt="Processing Logo">
-      <h2>Basic Java Processing</h2>
-      <p>Learn Java with daily one-hour sessions for 2 weeks. Ages 13–18. $150.</p>
-    </a>
-    <a class="card" href="java-month.html">
-      <img src="Processing.png" alt="Processing Logo">
-      <h2>Java Processing (1 Month)</h2>
-      <p>In-depth OOP course to learn Java. Ages 13–18. $450.</p>
-    </a>
-    <a class="card" href="scratch-free.html">
-      <img src="Scratch.png" alt="Scratch Logo">
-      <h2>Scratch Programming</h2>
-      <p>Intro to block coding. One 2-hour session. Ages 7–13. Free.</p>
-    </a>
-    <a class="card" href="roblox-basics.html">
-      <img src="RobloxStudio" alt="Roblox Logo">
-      <h2>Roblox Studio Basics</h2>
-      <p>Fun Roblox game creation. 5 one hour classes. Ages 7–15. $75.</p>
-    </a>
-    <a class="card" href="roblox-intermediate.html">
-      <img src="Roblox Studio" alt="Roblox Logo">
-      <h2>Intermediate Roblox Studio (4 Weeks)</h2>
-      <p>Advanced LUA and projects. 20 two hour classes. Ages 10–15. $650.</p>
-    </a>
-    <a class="card" href="html-css.html">
-      <img src="Github.png" alt="Github Logo">
-      <h2>HTML & CSS Website Building</h2>
-      <p>Code and host your own website.</p>
-    </a>
-    <a class="card" href="netbeans-java.html">
-      <img src="Netbeans.jpg" alt="NetBeans Logo">
-      <h2>Java NetBeans Programming</h2>
-      <p>Testing</p>
-    </a>
-    <a class="card" href="scratch-jr.html">
-      <img src="https://via.placeholder.com/300x150?text=Scratch+JR" alt="Scratch JR">
-      <h2>Scratch JR</h2>
-      <p>Testing</p>
-    </a>
-    <a class="card" href="python-ai.html">
-      <img src="https://via.placeholder.com/300x150?text=Python+AI" alt="Python AI">
-      <h2>Intro to Python & AI</h2>
-      <p>Explore Python and beginner AI concepts. Age 13–18. $180 total.</p>
-    </a>
-  </section>
+  <!-- Optional: Add About / Services / Contact Sections -->
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; 2025 My Company. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
