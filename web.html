@@ -2,60 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Personal Site</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .card {
-      background: white;
-      padding: 3rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 500px;
-    }
-
-    h1 {
-      margin-top: 0;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      background: #007acc;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.2s ease;
-    }
-
-    a.button:hover {
-      background: #005fa3;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Company</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="card">
-    <h1>Hello, I'm [Your Name]</h1>
-    <p>Welcome to my clean and simple personal website hosted with GitHub Pages. You can customize this text and make it truly yours.</p>
-    <a class="button" href="mailto:your@email.com">Contact Me</a>
-  </div>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navigation Header -->
+  <header class="bg-gray-950 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition-all">My Company</h1>
+      <nav class="hidden md:flex gap-6">
+        <a href="#" class="hover:text-indigo-300 transition">Home</a>
+        <a href="#about" class="hover:text-indigo-300 transition">About</a>
+        <a href="#services" class="hover:text-indigo-300 transition">Services</a>
+        <a href="#contact" class="hover:text-indigo-300 transition">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="#" class="block hover:text-indigo-300">Home</a>
+      <a href="#about" class="block hover:text-indigo-300">About</a>
+      <a href="#services" class="block hover:text-indigo-300">Services</a>
+      <a href="#contact" class="block hover:text-indigo-300">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-24 px-6 bg-gradient-to-b from-gray-900 to-gray-800">
+    <h2 class="text-5xl font-extrabold mb-4 text-indigo-400">Welcome to My Company</h2>
+    <p class="text-xl max-w-2xl mx-auto text-gray-300">We build innovative digital solutions that power the future. Explore our services and discover what we can do together.</p>
+    <div class="mt-8">
+      <a href="#services" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-6 py-3 rounded-full transition">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- Optional: Add About / Services / Contact Sections -->
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; 2025 My Company. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
